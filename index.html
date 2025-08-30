@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch • SkillCraft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Stopwatch</h1>
+
+    <div id="display" aria-live="polite">00:00:00.00</div>
+
+    <div class="controls">
+      <button id="startBtn" class="primary">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="lapBtn">Lap</button>
+      <button id="resetBtn" class="danger">Reset</button>
+    </div>
+
+    <div class="help">Space: Start/Pause • L: Lap • R: Reset</div>
+
+    <div class="laps-wrap">
+      <div class="laps-head">
+        <span>#</span><span>Lap</span><span>Total</span>
+      </div>
+      <ul id="laps"></ul>
+      <button id="clearLaps" class="ghost">Clear Laps</button>
+    </div>
+  </main>
+
+  <footer>Task 02 • SkillCraft Technology</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

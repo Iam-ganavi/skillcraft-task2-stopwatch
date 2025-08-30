@@ -1,0 +1,65 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg:#141624; --card:#1e2135; --text:#e9edf5;
+  --accent:#00b4ff; --danger:#ff4d67; --muted:#8c92ac;
+}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(60% 60% at 20% 10%, #1a2036, #0f1220) fixed;
+  color: var(--text);
+  min-height: 100svh;
+  display:flex; align-items:center; justify-content:center;
+  padding:32px;
+}
+
+.card{
+  width:min(820px, 96vw);
+  background: var(--card);
+  border:1px solid #2c3150;
+  border-radius:24px;
+  padding:28px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+h1{ font-size: 24px; letter-spacing:.5px; color:#cfe7ff; }
+
+#display{
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(36px, 7vw, 64px);
+  margin: 18px 0 12px;
+  text-align: center;
+}
+
+.controls{
+  display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
+  margin: 10px 0 6px;
+}
+
+button{
+  padding:10px 18px; border-radius:12px; border:1px solid #333957;
+  background:#252a45; color:var(--text); cursor:pointer;
+  transition:.2s transform, .2s background, .2s border-color;
+}
+button:hover{ transform: translateY(-1px); border-color:#49507a; }
+button:disabled{ opacity:.55; cursor:not-allowed; transform:none; }
+
+button.primary{ background:var(--accent); color:#001625; border-color:#00a0e4; }
+button.danger{ background:var(--danger); border-color:#ff3554; color:#2a0010; }
+button.ghost{ background:transparent; border-color:#3a4063; color:var(--muted); }
+
+.help{ text-align:center; color:var(--muted); font-size:12px; margin:6px 0 14px; }
+
+.laps-wrap{ margin-top: 10px; }
+.laps-head, #laps li{
+  display:grid; grid-template-columns: 42px 1fr 1fr; gap:10px;
+  padding:10px 12px; border-radius:12px; align-items:center;
+}
+.laps-head{ background:#232844; color:#aab3d8; font-weight:600; }
+#laps{ list-style:none; max-height: 260px; overflow:auto; margin:6px 0 10px; }
+#laps li{ background:#1b203a; border:1px solid #2c3150; }
+#laps li.best{ outline:2px solid #2bd67b; }
+#laps li.worst{ outline:2px solid #ff6b6b; }
+
+footer{ text-align:center; color:#6f7596; font-size:12px; margin-top:16px; }
